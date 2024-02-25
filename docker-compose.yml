@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+    # Amplify フロントエンドサーバ
+    amplify:
+        build: ./amplify
+        ports:
+            - "8080:8080" # フロントエンド
+            - "20002:20002" # バックエンド
+        volumes:
+            - ./amplify:/var/www/app
+            - ~/.aws/:/root/.aws/
+        tty: true
+        command: "npm run serve"
+
+    # API Gateway(Lambdaを含む) バックエンド
+    localstack:
+        image: localstack/localstack
+        ports:
+            - "4566:4566" # LocalStackのデフォルトのエンドポイントポート
+        environment:
+            - SERVICES=lambda,apigateway # 使用するAWSサービス
+            - DEFAULT_REGION=ap-northeast-1 # デフォルトのリージョン
+            - LAMBDA_EXECUTOR=docker # Lambda関数の実行モード
+            - DOCKER_HOST=unix:///var/run/docker.sock
+        volumes:
+            - "/var/run/docker.sock:/var/run/docker.sock" # ホストのDockerデーモンと通信するため
+            - "./ApiGateway/lambda:/docker-entrypoint-initaws.d" # Lambda関数のコードをマウントするディレクトリ
