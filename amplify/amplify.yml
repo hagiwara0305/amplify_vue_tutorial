@@ -1,15 +1,16 @@
-version: 1
-applications:
-  - frontend:
-      phases:
-        preBuild:
-          commands:
-            - cd amplify && npm install
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: amplify/dist
-        files:
-          - '**/*'
-    appRoot: amplify
+version: 0.1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
