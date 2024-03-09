@@ -19,7 +19,17 @@
         }
       },
       "auth": {
-        "amplifytutorialapp52095625": {}
+        "amplifytutorialapp8eb13024": {},
+        "amplifytutorialappad160194": {}
+      },
+      "function": {
+        "amplifytutorialapp4b5adead": {
+          "deploymentBucketName": "amplify-amplifytutorialapp-dev-111616-deployment",
+          "s3Key": "amplify-builds/amplifytutorialapp4b5adead-622f7961304e2f38567a-build.zip"
+        }
+      },
+      "api": {
+        "api9ecd8242": {}
       }
     }
   }

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/rest-api": {
+      "name": "/rest-api",
+      "lambdaFunction": "amplifytutorialapp4b5adead",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
