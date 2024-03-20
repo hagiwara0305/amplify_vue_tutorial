@@ -8,6 +8,10 @@ services:
             - "8080:8080"
         volumes:
             - ./amplify/amplify-sample-project/:/var/www/app
-            - ~/.aws/:/root/.aws/
+            - ${USER_PATH}/.aws/:/root/.aws/
         tty: true
+        stdin_open: true
         command: "npm run serve"
+        # command: tail -f /dev/null    # エラー時の最小起動
+        environment:
+            - CHOKIDAR_USEPOLLING=true
