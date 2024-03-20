@@ -9,6 +9,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
   },
   "dependencies": {
+    "@vue/cli-service": "~5.0.0",
     "@aws-amplify/ui-vue": "^1.0.12",
     "aws-amplify": "^4.1.1",
     "bootstrap": "^5.3.3",
@@ -25,7 +26,6 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "^5.0.8",
     "@vue/cli-plugin-vuex": "^5.0.8",
-    "@vue/cli-service": "~5.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",

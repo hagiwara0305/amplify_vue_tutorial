@@ -1,11 +1,24 @@
 {
   "version": 1,
   "paths": {
-    "/rest-api": {
-      "name": "/rest-api",
+    "/public/rest-api": {
+      "name": "/public/rest-api",
       "lambdaFunction": "amplifytutorialapp4b5adead",
       "permissions": {
         "setting": "open"
+      }
+    },
+    "/private/rest-api": {
+      "name": "/private/rest-api",
+      "lambdaFunction": "amplifyFunctionAuth",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
       }
     }
   }

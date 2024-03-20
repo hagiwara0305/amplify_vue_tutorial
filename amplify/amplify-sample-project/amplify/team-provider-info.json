@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-amplifytutorialapp-dev-111616-unauthRole",
       "StackName": "amplify-amplifytutorialapp-dev-111616",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:100577864833:stack/amplify-amplifytutorialapp-dev-111616/f6656060-d6f3-11ee-9ed9-0af5ea0d536d",
-      "AmplifyAppId": "d1n5omzs71j1db"
+      "AmplifyAppId": "d1n5omzs71j1db",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplifytutorialapp-dev-111616-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "hosting": {
@@ -25,7 +26,11 @@
       "function": {
         "amplifytutorialapp4b5adead": {
           "deploymentBucketName": "amplify-amplifytutorialapp-dev-111616-deployment",
-          "s3Key": "amplify-builds/amplifytutorialapp4b5adead-622f7961304e2f38567a-build.zip"
+          "s3Key": "amplify-builds/amplifytutorialapp4b5adead-754e4c446b304d4d4259-build.zip"
+        },
+        "amplifyFunctionAuth": {
+          "deploymentBucketName": "amplify-amplifytutorialapp-dev-111616-deployment",
+          "s3Key": "amplify-builds/amplifyFunctionAuth-4755494f726e34677366-build.zip"
         }
       },
       "api": {

@@ -13,7 +13,7 @@ exports.handler = async (event) => {
             "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
             "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
         },
-        body: JSON.stringify({ message: "Hello from Lambda!" }),
+        body: JSON.stringify({ message: "Hello from auth Lambda!" }),
     };
     
     return response;

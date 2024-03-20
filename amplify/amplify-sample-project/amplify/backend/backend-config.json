@@ -9,6 +9,14 @@
           ],
           "category": "function",
           "resourceName": "amplifytutorialapp4b5adead"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "amplifyFunctionAuth"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -42,6 +50,11 @@
     }
   },
   "function": {
+    "amplifyFunctionAuth": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "amplifytutorialapp4b5adead": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -56,6 +69,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_amplifyFunctionAuth_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifyFunctionAuth"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifyFunctionAuth_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifyFunctionAuth"
+        }
+      ]
+    },
     "AMPLIFY_function_amplifytutorialapp4b5adead_deploymentBucketName": {
       "usedBy": [
         {

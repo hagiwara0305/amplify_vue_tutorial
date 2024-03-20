@@ -50,12 +50,12 @@ export default {
         // 一般公開用APIリクエスト
         async requestAPI() {
             let webApi = new WebAPI();
-            this.api_response_table[1]["return_value"] = await webApi.getAPIRsequest("/rest-api");
+            this.api_response_table[1]["return_value"] = await webApi.getAPIRsequest("/public/rest-api");
         },
         // ログイン必須APIリクエスト
         async loginRequestAPI() {
             let webApi = new WebAPI();
-            this.api_response_table[0]["return_value"] = await webApi.getAPIRsequest("/rest-api");
+            this.api_response_table[0]["return_value"] = await webApi.getAPIRsequest("/private/rest-api");
         }
     },
 };

@@ -5,9 +5,11 @@ API.configure(awsconfig);
 
 export class WebAPI {
     async getAPIRsequest(url) {
+        console.log(url)
         // REST APIの呼び出し例
-        return await API.get('api9ecd8242', url, {}).then(response => 
+        return await API.get('api9ecd8242', url, {}).then(response =>
             response.message
-        ).catch(error => {error});
+        ).catch(error => error.message);
+
     }
 }
