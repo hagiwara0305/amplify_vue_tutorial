@@ -1,25 +1,9 @@
 <template>
     <div class="home">
-        <v-container>
-            <v-row>
-                <v-col>
-                    <h1>ログイン済</h1>
-                </v-col>
-            </v-row>
-            <v-row>
-                <v-col>
-                    <!--ログアウトコンポーネント-->
-                    <amplify-sign-out></amplify-sign-out>
-                </v-col>
-            </v-row>
-        </v-container>
-
-        <div class="home">
-            <div class="mx-5">
-                <b-table striped hover :items="api_response_table" :fields="fields"></b-table>
-                <b-button variant="outline-primary" v-on:click="requestAPI">一般公開用API</b-button>
-                <b-button variant="outline-primary" v-on:click="loginRequestAPI">ログイン必須API</b-button>
-            </div>
+        <div class="mx-5">
+            <b-table striped hover :items="api_response_table" :fields="fields"></b-table>
+            <b-button variant="outline-primary" v-on:click="requestAPI">一般公開用API</b-button>
+            <b-button variant="outline-primary" v-on:click="loginRequestAPI">ログイン必須API</b-button>
         </div>
     </div>
 </template>
@@ -28,7 +12,7 @@
 import { WebAPI } from "../store/request-api";
 
 export default {
-    name: "home",
+    name: "roting",
     data() {
         return {
             fields: [

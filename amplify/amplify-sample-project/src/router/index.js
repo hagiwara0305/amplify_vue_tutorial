@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
+import Routing from '../views/Routing.vue'
 import Login from '../components/Login.vue'
 
 import store from '../store/index.js'
@@ -40,6 +41,7 @@ Hub.listen("auth", async (data) => {
         router.push({path: '/login'});
     } else if (data.payload.event === 'signIn') {
         user = await getUser();
+        console.log(user);
         router.push({path: '/'});
     }
 });
@@ -60,6 +62,13 @@ const router = new Router({
             name: 'home',
             component: Home,
             meta: { requiresAuth: true}
+        },
+        {
+            // ルーティングテスト(ログイン認証なし)
+            path: '/routing',
+            name: 'routing',
+            component: Routing,
+            meta: { requiresAuth: false}
         }
     ]
 });
